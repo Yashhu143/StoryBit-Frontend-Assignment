@@ -4,21 +4,20 @@
 export interface MovieSearchItem {
   Title: string;
   Year: string;
-  imdbID: string; // Used to fetch full details
+  imdbID: string;
   Type: string;
   Poster: string;
 }
 
 // 2. Structure for the overall response when searching for a list
 export interface MovieSearchResponse {
-  Search: MovieSearchItem[]; // Array of movie results
+  Search: MovieSearchItem[];
   totalResults: string;
-  Response: 'True' | 'False'; // OMDb status indicator
-  Error?: string; // Present if Response is 'False'
+  Response: 'True' | 'False';
+  Error?: string;
 }
 
-/
-// 3. Structure for the full detail response (i= parameter) - now includes Error
+// 3. Structure for the full detail response (i= parameter)
 export interface MovieDetail {
   Title: string;
   Year: string;
@@ -32,10 +31,8 @@ export interface MovieDetail {
   Poster: string;
   imdbID: string;
   Type: string;
+  Language: string;
   Country: string;
-  Language: string; 
-  original_language: string;
   Response: 'True' | 'False';
-  Error?: string; // <--- ADD THIS LINE: OMDb uses this field when Response is 'False'
+  Error?: string;
 }
-// ... (The rest of your types remain the same)
