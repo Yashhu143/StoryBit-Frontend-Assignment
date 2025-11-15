@@ -32,6 +32,7 @@ export interface MovieDetail {
   Poster: string;
   imdbID: string;
   Type: string;
+  original_language: string;
   Response: 'True' | 'False';
   Error?: string; // <--- ADD THIS LINE: OMDb uses this field when Response is 'False'
 }
