@@ -1,8 +1,14 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // --- ADD THIS SECTION ---
+  images: {
+    domains: [
+      'm.media-amazon.com', // <- ADD THIS HOSTNAME
+      // If you added the scrollbar-hide plugin, you might have other config here
+    ],
+  },
+  // -------------------------
 };
 
-export default nextConfig;
+module.exports = nextConfig;
