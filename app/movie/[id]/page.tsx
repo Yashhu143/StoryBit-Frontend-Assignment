@@ -89,7 +89,7 @@ export default async function MoviePage({
               </div>
               <div>
                 <span className="font-semibold text-gray-400 block">Language:</span>
-                <span className="text-white">{movie.Language}</span>
+                <span className="text-white">{movie.language}</span>
               </div>
               <div>
                 <span className="font-semibold text-gray-400 block">Country:</span>
