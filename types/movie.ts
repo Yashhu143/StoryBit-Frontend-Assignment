@@ -17,7 +17,8 @@ export interface MovieSearchResponse {
   Error?: string; // Present if Response is 'False'
 }
 
-// 3. Structure for the full details of a movie (i= parameter)
+/
+// 3. Structure for the full detail response (i= parameter) - now includes Error
 export interface MovieDetail {
   Title: string;
   Year: string;
@@ -28,10 +29,10 @@ export interface MovieDetail {
   Director: string;
   Actors: string;
   Plot: string;
-  Language: string;
-  Country: string;
   Poster: string;
   imdbID: string;
   Type: string;
   Response: 'True' | 'False';
+  Error?: string; // <--- ADD THIS LINE: OMDb uses this field when Response is 'False'
 }
+// ... (The rest of your types remain the same)
